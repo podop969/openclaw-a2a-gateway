@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## 2026.2.13
+
+### Changes
+- Version alignment with core OpenClaw release numbers.
+
 ## [1.0.1] - 2026-03-17
 
 ### Added
@@ -69,3 +74,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 [1.0.1]: https://github.com/win4r/openclaw-a2a-gateway/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/win4r/openclaw-a2a-gateway/compare/v0.1.0...v1.0.0
 [0.1.0]: https://github.com/win4r/openclaw-a2a-gateway/commits/v0.1.0
+

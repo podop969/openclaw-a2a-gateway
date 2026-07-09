@@ -28,9 +28,10 @@ describe("cross-platform tasksDir default (issue #25)", () => {
       path.isAbsolute(config.storage.tasksDir),
       `tasksDir should be absolute but got "${config.storage.tasksDir}"`,
     );
+    const expectedSuffix = path.join("data", "tasks");
     assert.ok(
-      config.storage.tasksDir.endsWith("data/tasks"),
-      `should end with "data/tasks" but got "${config.storage.tasksDir}"`,
+      config.storage.tasksDir.endsWith(expectedSuffix),
+      `should end with "${expectedSuffix}" but got "${config.storage.tasksDir}"`,
     );
   });
 
@@ -75,9 +76,10 @@ describe("cross-platform auditLogPath default", () => {
       path.isAbsolute(config.observability.auditLogPath),
       `auditLogPath should be absolute but got "${config.observability.auditLogPath}"`,
     );
+    const expectedSuffix = path.join("data", "audit.jsonl");
     assert.ok(
-      config.observability.auditLogPath.endsWith("data/audit.jsonl"),
-      `should end with "data/audit.jsonl" but got "${config.observability.auditLogPath}"`,
+      config.observability.auditLogPath.endsWith(expectedSuffix),
+      `should end with "${expectedSuffix}" but got "${config.observability.auditLogPath}"`,
     );
   });
 });

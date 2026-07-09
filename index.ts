@@ -664,7 +664,15 @@ const plugin = {
           "Use this when you need to transfer a document, image, or any file to another agent.",
         label: "A2A Send File",
         parameters: sendFileParams,
-        async execute(toolCallId, params) {
+        async execute(toolCallId, rawParams) {
+          const params = rawParams as {
+            peer: string;
+            uri: string;
+            name?: string;
+            mimeType?: string;
+            text?: string;
+            agentId?: string;
+          };
           const peer = findPeer(params.peer);
           if (!peer) {
             const available = getEffectivePeers().map((p) => p.name).join(", ") || "(none)";
